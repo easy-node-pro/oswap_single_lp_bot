@@ -1,25 +1,15 @@
 # Description
-Watch my Youtube vid (https://youtu.be/vqy_5ix0B1c) for more instructions on how to use this repository.
-
-This code is used to auto compound your DINO tokens that you earn from the DINO/USDC farm on Dinoswap into the Jurassic DINO pool. The tokens are auto compounded every four minutes.
-
-Dinoswap is a yield farm on the polygon network.
-
-
+A bot that checks for oSwap every 5 minutes and deposits it into the solo staking oSwap pool
 
 # Disclaimer
 You can use this code and extend it for your own personal use.
 This is not production ready code.
 Please be very careful with your private key and never push it to a public repository. It's advised that you use an account that doesn't have all your funds attached to it. 
 
-<br>
-
 # Prerequisites
 - Node JS installed `brew install node`
 - You have a DINO/USDC LP deposited to the Dinoswap Yield Farm (dinoswap.exchange)
 - You have MATIC tokens in your account to pay for gas fees 
-
-<br>
 
 # Steps to run
 1. navigate to the folder in your terminal
@@ -28,8 +18,19 @@ Please be very careful with your private key and never push it to a public repos
 4. make sure that the `.env` file is in the `.gitignore` file
 5. Now you're ready to run the auto compounding bot `node index`
 
-<br>
+# OpenSwap Contractcs on Harmony ONE Protocol Blockchain
+- `OpenSwap TOKEN_ADDRESS="0xc0431Ddcc0D213Bf27EcEcA8C2362c0d0208c6DC"`
 
-# DINOSWAP Smart Contracts on Polygon
-- `DINO/USDC Farm - 0x1948abc5400aa1d72223882958da3bec643fb4e5`
-- `DINO Jurassic Pool - 0x52e7b0c6fb33d3d404b07006b006c8a8d6049c55`
+# Environment Variables
+Copy env_sample to .env & fill in with your settings. Here's our notes:
+
+- PRIVATE_KEY=
+    - Your Harmony ONE Wallet Private Key (Export from wallet)
+- TOKEN_ADDRESS="0xc0431Ddcc0D213Bf27EcEcA8C2362c0d0208c6DC"
+    - This is the address for OpenSwap
+- WALLET_ADDRESS="0xXXXXX"
+    - Your harmony wallet address
+- FARM_PID=11
+    - Farm PID - Get from vfat.tools pool if you're changing it out from oswap
+- OSWAP_MASTERCHEF_CONTRACT = "0xaC71B617a58B3CC136D1f6A118252f331faB44fC"
+    - Contract for depositing oswap on oswap
