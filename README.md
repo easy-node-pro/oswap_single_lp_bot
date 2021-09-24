@@ -7,7 +7,8 @@ This is not production ready code.
 Please be very careful with your private key and never push it to a public repository. It's advised that you use an account that doesn't have all your funds attached to it. 
 
 # Prerequisites
-- Node JS installed `brew install node`
+- Node JS installed 
+    - MAC users: `brew install node`
 - You have money in the OpenSwap 100% validator getting rewards or single staking oSwap LP pool
 - You have Harmony ONE to pay gas fees
 
