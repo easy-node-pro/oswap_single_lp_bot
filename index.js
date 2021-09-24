@@ -86,5 +86,24 @@ compound(result)
         
         console.log(`fetch amountOswap ${result}`)
 });
+
 const POLLING_INTERVAL = 300000 // 5 minutes 
-setInterval(async () => { await getBalance(result) }, POLLING_INTERVAL)
+setInterval(async () => { await getBalance().then(function (result) {
+
+compound(result)
+/*
+      const gasLimit = 200000
+      const gasPrice = web3.eth.getGasPrice()
+      const txCost = web3.utils.fromWei(gasPrice.toString(),'ether') * gasLimit
+      const depositTx = dinoExtinctionContract.methods.transact(result).send(
+            {
+            from: wallet.address,
+            gas: gasLimit,
+            gasPrice: gasPrice
+            }
+        )
+        console.log(`deposit status: ${depositTx.status}`);
+        */
+        
+        console.log(`fetch amountOswap ${result}`)
+});}, POLLING_INTERVAL)
