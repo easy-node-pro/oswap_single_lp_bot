@@ -87,4 +87,4 @@ compound(result)
         console.log(`fetch amountOswap ${result}`)
 });
 const POLLING_INTERVAL = 300000 // 5 minutes 
-setInterval(async () => { await compound() }, POLLING_INTERVAL)
+setInterval(async () => { await getBalance(result) }, POLLING_INTERVAL)
