@@ -87,7 +87,7 @@ compound(result)
         console.log(`Pending oSwap to deposit ${resultRound.toFixed(8)}`)
 });
 
-const POLLING_INTERVAL = 300000 // 5 minutes 
+const POLLING_INTERVAL = 600000 // 10 minutes 
 setInterval(async () => { await getBalance().then(function (result) {
 
 compound(result)
