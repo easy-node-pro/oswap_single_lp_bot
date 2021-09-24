@@ -29,7 +29,7 @@ Please be very careful with your private key and never push it to a public repos
 # Environment Variables
 Copy env_sample to .env & fill in with your settings. Here's our notes:
 
-- PRIVATE_KEY=
+- PRIVATE_KEY=84985998afe8f98EXAMPLE9999999
     - Your Harmony ONE Wallet Private Key (Export from wallet)
 - TOKEN_ADDRESS="0xc0431Ddcc0D213Bf27EcEcA8C2362c0d0208c6DC"
     - This is the address for OpenSwap
