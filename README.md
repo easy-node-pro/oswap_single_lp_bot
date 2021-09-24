@@ -42,4 +42,4 @@ Copy env_sample to .env & fill in with your settings. Here's our notes:
     - Contract for depositing oswap on oswap
 
 # Credits
-- Inspired by @alysiahuggins project dinoswap-compound-bot
+- Inspired by @alysiahuggins project [dinoswap-compound-bot](https://github.com/alysiahuggins/dinoswap-compound-bot "dinoswap-compound-bot")
