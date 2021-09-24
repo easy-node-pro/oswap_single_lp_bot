@@ -12,11 +12,12 @@ Please be very careful with your private key and never push it to a public repos
 - You have Harmony ONE to pay gas fees
 
 # Steps to run
-1. navigate to the folder in your terminal
-2. run `npm install`
-3. copy env_sample to a new file (.env) and enter your Polygon RPC URL and the private key of the account that currently has its LP in the DINO/USDC farm `cp env_sample .env`
-4. make sure that the `.env` file is in the `.gitignore` file
-5. Now you're ready to run the auto compounding bot `node index`
+- navigate to the folder in your terminal
+- run `npm install openswap-core`
+- run `npm install`
+- copy env_sample to a new file (.env) and enter your Polygon RPC URL and the private key of the account that currently has its LP in the DINO/USDC farm `cp env_sample .env`
+- make sure that the `.env` file is in the `.gitignore` file
+- Now you're ready to run the openswap auto compounding bot `node index`
 
 # OpenSwap Contractcs on Harmony ONE Protocol Blockchain
 - `OpenSwap TOKEN_ADDRESS="0xc0431Ddcc0D213Bf27EcEcA8C2362c0d0208c6DC"`
