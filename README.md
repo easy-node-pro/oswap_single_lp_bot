@@ -40,3 +40,6 @@ Copy env_sample to .env & fill in with your settings. Here's our notes:
     - Farm PID - Get from vfat.tools pool if you're changing it out from oswap
 - OSWAP_MASTERCHEF_CONTRACT = "0xaC71B617a58B3CC136D1f6A118252f331faB44fC"
     - Contract for depositing oswap on oswap
+
+# Credits
+- Inspired by @alysiahuggins project dinoswap-compound-bot
