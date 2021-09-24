@@ -8,8 +8,8 @@ Please be very careful with your private key and never push it to a public repos
 
 # Prerequisites
 - Node JS installed `brew install node`
-- You have a DINO/USDC LP deposited to the Dinoswap Yield Farm (dinoswap.exchange)
-- You have MATIC tokens in your account to pay for gas fees 
+- You have money in the OpenSwap 100% validator getting rewards or single staking oSwap LP pool
+- You have Harmony ONE to pay gas fees
 
 # Steps to run
 1. navigate to the folder in your terminal
