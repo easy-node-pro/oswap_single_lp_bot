@@ -46,7 +46,7 @@ let currently_compounding = false
 
 async function compound(amountOswap){
     if(currently_compounding) return
-    console.log('Run Compounding')
+    console.log('\nRun Compounding')
     try{
         
         const gasLimit = 250000 //(await web3.eth.getBlock('latest')).gasLimit
@@ -59,10 +59,10 @@ async function compound(amountOswap){
             gasPrice: gasPrice
             }
         )
-        console.log(`Deposit Completed: ${depositTx.status}`)
+        console.log(`Deposit Completed: ${depositTx.status}\n`)
     } catch (err){
         currently_compounding = false
-        console.log(`Deposit OSWAP Error: ${err.message}`)
+        console.log(`Deposit OSWAP Error: ${err.message}\n`)
         return
     }
 }
