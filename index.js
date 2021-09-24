@@ -1,12 +1,13 @@
 require('dotenv').config()
 const Web3 = require('web3')
+const BN = require('bn.js')
 
 //WEB3 Config
 const web3 = new Web3(process.env.RPC_URL)
 const wallet = web3.eth.accounts.wallet.add(process.env.PRIVATE_KEY)
 
 //SMART CONTRACT ABIs
-var MasterChef = require("./node_modules/openswap-core/build/contracts/MasterChef.json");
+var MasterChef = require("./node_modules/openswap-core/build/contracts/MasterChef.json")
 const OSWAP_MASTERCHEF_ABI = MasterChef.abi;
 
 //smart contract objects
@@ -49,8 +50,8 @@ async function compound(amountOswap){
     console.log('\nRun Compounding')
     try{
         
-        const gasLimit = 250000 //(await web3.eth.getBlock('latest')).gasLimit
-        const gasPrice = await web3.eth.getGasPrice()
+        const gasLimit = 200000 //(await web3.eth.getBlock('latest')).gasLimit
+        const gasPrice = new BN(await web3.eth.getGasPrice()).mul(new BN(1))
         const txCost = web3.utils.fromWei(gasPrice.toString(),'ether') * gasLimit
         const depositTx = await oswapMasterChefContract.methods.deposit(process.env.FARM_PID,amountOswap).send(
             {
