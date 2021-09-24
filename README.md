@@ -18,7 +18,7 @@ Please be very careful with your private key and never push it to a public repos
 - run `npm install`
 - copy env_sample to a new file (.env) and enter your Polygon RPC URL and the private key of the account that currently has its LP in the DINO/USDC farm `cp env_sample .env`
 - make sure that the `.env` file is in the `.gitignore` file
-- if you'd like to keep it running on your system if you close your terminal use tmux `tmux new -s openswap` to start a new tmux session.
+- **Optional** if you'd like to keep it running on your system if you close your terminal use tmux `tmux new -s openswap` to start a new tmux session.
     - use `tmux -disconnect` to leave the session running but exit.
     - use `tmux attach` to reconnect to the openswap session.
 - Now you're ready to run the openswap auto compounding bot `node index`
