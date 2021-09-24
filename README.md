@@ -1,5 +1,5 @@
 # Description
-A bot that checks for oSwap every 5 minutes and deposits it into the solo staking oSwap pool
+When you start this bot, it will claim Open Swap Single Pool oSwap rewards and that triggers a claim of pending rewards. If you stake in the [Open Swap 100% Validator](https://staking.harmony.one/validators/mainnet/one1j35d0vd4uzwffeawjjfukn8t9wjt8csungj0z0 "Open Swap 100% Validator") you get rewards every 10 minutes, this will compound those rewards into the Single LP boosting your APY.
 
 # Disclaimer
 You can use this code and extend it for your own personal use.
