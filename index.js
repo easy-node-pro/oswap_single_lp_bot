@@ -46,7 +46,7 @@ let currently_compounding = false
 
 async function compound(amountOswap){
     if(currently_compounding) return
-    console.log('begin compounding')
+    console.log('Run Compounding')
     try{
         
         const gasLimit = 250000 //(await web3.eth.getBlock('latest')).gasLimit
@@ -59,10 +59,10 @@ async function compound(amountOswap){
             gasPrice: gasPrice
             }
         )
-        console.log(`deposit status: ${depositTx.status}`)
+        console.log(`Deposit Completed: ${depositTx.status}`)
     } catch (err){
         currently_compounding = false
-        console.log(`Deposit OSWAP error ${err.message}`)
+        console.log(`Deposit OSWAP Error: ${err.message}`)
         return
     }
 }
@@ -83,8 +83,8 @@ compound(result)
         )
         console.log(`deposit status: ${depositTx.status}`);
         */
-        
-        console.log(`fetch amountOswap ${result}`)
+        resultRound = result * 0.000000000000000001
+        console.log(`Pending oSwap to deposit ${resultRound.toFixed(8)}`)
 });
 
 const POLLING_INTERVAL = 300000 // 5 minutes 
@@ -104,6 +104,6 @@ compound(result)
         )
         console.log(`deposit status: ${depositTx.status}`);
         */
-        
-        console.log(`fetch amountOswap ${result}`)
+        resultRound = result * 0.000000000000000001
+        console.log(`Pending oSwap to deposit ${resultRound.toFixed(8)}`)
 });}, POLLING_INTERVAL)
