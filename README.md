@@ -16,7 +16,7 @@ Please be very careful with your private key and never push it to a public repos
 - navigate to the folder in your terminal
 - run `npm install openswap-core`
 - run `npm install`
-- copy env_sample to a new file (.env) and enter your Polygon RPC URL and the private key of the account that currently has its LP in the DINO/USDC farm `cp env_sample .env`
+- copy env_sample to a new file (.env) and enter your Polygon RPC URL and the private key of the account that currently has its LP in the oSwap farm `cp env_sample .env`
 - make sure that the `.env` file is in the `.gitignore` file
 - **Optional:** if you'd like to keep it running on your system if you close your terminal use tmux `tmux new -s openswap` to start a new tmux session.
     - use `tmux -disconnect` to leave the session running but exit.
