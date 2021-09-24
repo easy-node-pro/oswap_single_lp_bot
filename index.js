@@ -42,7 +42,10 @@ const decimalsBN = await contract.methods.decimals().call();
 return balanceBN 
 }
 
+let currently_compounding = false
+
 async function compound(amountOswap){
+    if(currently_compounding) return
     console.log('begin compounding')
     try{
         
