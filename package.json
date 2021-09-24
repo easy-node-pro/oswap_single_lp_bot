@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
+    "openswap-core": "^0.7.8",
     "web3": "^1.5.0"
   }
 }
