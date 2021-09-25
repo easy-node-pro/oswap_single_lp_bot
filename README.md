@@ -30,9 +30,6 @@ npm install
     - use `tmux attach` to reconnect to the openswap session.
 - Now you're ready to run the openswap auto compounding bot `node index`
 
-# OpenSwap Contractcs on Harmony ONE Protocol Blockchain
-- `OpenSwap TOKEN_ADDRESS="0xc0431Ddcc0D213Bf27EcEcA8C2362c0d0208c6DC"`
-
 # Environment Variables
 Copy env_sample to .env & fill in with your settings. Here's our notes:
 
@@ -46,6 +43,9 @@ Copy env_sample to .env & fill in with your settings. Here's our notes:
     - Farm PID - Get from vfat.tools pool if you're changing it out from oswap
 - OSWAP_MASTERCHEF_CONTRACT = "0xaC71B617a58B3CC136D1f6A118252f331faB44fC"
     - Contract for depositing oswap on oswap
+
+# OpenSwap Contractcs on Harmony ONE Protocol Blockchain
+- `OpenSwap TOKEN_ADDRESS="0xc0431Ddcc0D213Bf27EcEcA8C2362c0d0208c6DC"`
 
 # Credits
 - Inspired by @alysiahuggins project [dinoswap-compound-bot](https://github.com/alysiahuggins/dinoswap-compound-bot "dinoswap-compound-bot")
