@@ -19,7 +19,7 @@ Please be very careful with your private key and never push it to a public repos
 Open a terminal and run the following to download and install pre-requesites for running the bot:
 ```bash
 git clone https://github.com/easy-node-one/oswap_single_lp_bot.git
-cd cd oswap_single_lp_bot
+cd oswap_single_lp_bot
 npm install openswap-core
 npm install
 ```
