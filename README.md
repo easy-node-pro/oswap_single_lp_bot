@@ -20,7 +20,7 @@ Please be very careful with your private key and never push it to a public repos
 - You have money in the OpenSwap 100% validator or single staking oSwap LP pool earning oSwap as a reward
 - You have Harmony ONE to pay gas fees in your wallet
 
-# Steps to run
+# Steps to run the oSwap bot
 Open a terminal and run the following to download and install pre-requesites for running the bot:
 ```bash
 git clone https://github.com/easy-node-one/oswap_single_lp_bot.git
@@ -49,8 +49,9 @@ Copy env_sample to .env & fill in with your settings. Here's our notes:
 - OSWAP_MASTERCHEF_CONTRACT = "0xaC71B617a58B3CC136D1f6A118252f331faB44fC"
     - Contract for depositing oswap on oswap
 
-# OpenSwap Contractcs on Harmony ONE Protocol Blockchain
+# Contractcs used by this bot on Harmony ONE Protocol Blockchain
 - `OpenSwap TOKEN_ADDRESS="0xc0431Ddcc0D213Bf27EcEcA8C2362c0d0208c6DC"`
+- `OSWAP_MASTERCHEF_CONTRACT = "0xaC71B617a58B3CC136D1f6A118252f331faB44fC"`
 
 # Credits
 - Inspired by @alysiahuggins project [dinoswap-compound-bot](https://github.com/alysiahuggins/dinoswap-compound-bot "dinoswap-compound-bot")
