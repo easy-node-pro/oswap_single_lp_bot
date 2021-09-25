@@ -35,7 +35,7 @@ npm install
     - use `tmux attach` to reconnect to the openswap session.
 
 # Run the oSwap Single LP Bot
-Now you're ready to run the openswap auto compounding bot, go to your oswap_single_lp_bot folder and run:
+Now you're ready to run the openswap auto compounding bot, go to your `oswap_single_lp_bot` folder and run:
 - `node index`
 
 # Updates
