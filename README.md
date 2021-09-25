@@ -26,7 +26,7 @@ npm install
 - copy env_sample to a new file (.env) and enter your Polygon RPC URL and the private key of the account that currently has its LP in the oSwap farm `cp env_sample .env`
 - make sure that the `.env` file is in the `.gitignore` file (it is by default, see Environment Variables below)
 - **Optional:** if you would like to keep the bot running on your system if you close your terminal or get disconnected, you can use tmux `tmux new -s openswap` to start a new tmux session.
-    - use `tmux -disconnect` to leave the session running but exit.
+    - press `ctrl+b d` to leave the session running but exit.
     - use `tmux attach` to reconnect to the openswap session.
 - Now you're ready to run the openswap auto compounding bot `node index`
 
