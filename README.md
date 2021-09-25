@@ -1,7 +1,7 @@
 # Description
-When you start this bot, it will claim Open Swap Single Pool oSwap rewards and that triggers a claim of pending rewards. 
+When you download, configure, & start this bot, it will deposit any oSwap Tokens you have into the Open Swap Single Pool. That deposit triggers a claim of pending rewards the next time it runs in 10 minutes.
 
-This runs on a 10 minute timer, if you stake in the [Open Swap 100% Validator](https://staking.harmony.one/validators/mainnet/one1j35d0vd4uzwffeawjjfukn8t9wjt8csungj0z0 "Open Swap 100% Validator") you get rewards every 10 minutes, this will compound those rewards into the Single LP boosting your APY.
+If you stake Harmony $ONE Protocol in the [Open Swap 100% Validator](https://staking.harmony.one/validators/mainnet/one1j35d0vd4uzwffeawjjfukn8t9wjt8csungj0z0 "Open Swap 100% Validator") you get rewards every 10 minutes, this will compound those rewards into the Single oSwap LP boosting your APY.
 
 # Disclaimer
 You can use this code and extend it for your own personal use.
@@ -10,18 +10,22 @@ Please be very careful with your private key and never push it to a public repos
 
 # Prerequisites
 - Node JS installed 
-    - MAC users: `brew install node`
+    - MAC users - Install node via brew ([click here](https://setapp.com/how-to/install-homebrew-on-mac "click here") to learn how to install brew)
+	- `brew install node`
 - You have money in the OpenSwap 100% validator getting rewards or single staking oSwap LP pool
 - You have Harmony ONE to pay gas fees
 
 # Steps to run
-- download this repository `git clone https://github.com/easy-node-one/oswap_single_lp_bot.git`
-- `cd cd oswap_single_lp_bot`
-- run `npm install openswap-core`
-- run `npm install`
+Open a terminal and run the following to download and install pre-requesites for running the bot:
+```bash
+git clone https://github.com/easy-node-one/oswap_single_lp_bot.git
+cd cd oswap_single_lp_bot
+npm install openswap-core
+npm install
+```
 - copy env_sample to a new file (.env) and enter your Polygon RPC URL and the private key of the account that currently has its LP in the oSwap farm `cp env_sample .env`
-- make sure that the `.env` file is in the `.gitignore` file
-- **Optional:** if you'd like to keep it running on your system if you close your terminal use tmux `tmux new -s openswap` to start a new tmux session.
+- make sure that the `.env` file is in the `.gitignore` file (it is by default, see Environment Variables below)
+- **Optional:** if you would like to keep the bot running on your system if you close your terminal or get disconnected, you can use tmux `tmux new -s openswap` to start a new tmux session.
     - use `tmux -disconnect` to leave the session running but exit.
     - use `tmux attach` to reconnect to the openswap session.
 - Now you're ready to run the openswap auto compounding bot `node index`
