@@ -9,11 +9,16 @@ This is not production ready code.
 Please be very careful with your private key and never push it to a public repository. It's advised that you use an account that doesn't have all your funds attached to it. 
 
 # Prerequisites
-- Node JS installed 
-    - MAC users - Install node via brew ([click here](https://setapp.com/how-to/install-homebrew-on-mac "click here") to learn how to install brew)
-	- `brew install node`
-- You have money in the OpenSwap 100% validator getting rewards or single staking oSwap LP pool
-- You have Harmony ONE to pay gas fees
+- You have a computer that runs 24/7 with Node JS installed 
+    - MAC users
+        - Install node via brew ([click here](https://setapp.com/how-to/install-homebrew-on-mac "click here") to learn how to install brew
+	    - `brew install node`
+    - Windows users
+        - Install node.js ([from here](https://nodejs.org/en/download/ "from here")).
+    - Linux users
+        - `sudo apt install nodejs`
+- You have money in the OpenSwap 100% validator or single staking oSwap LP pool earning oSwap as a reward
+- You have Harmony ONE to pay gas fees in your wallet
 
 # Steps to run
 Open a terminal and run the following to download and install pre-requesites for running the bot:
@@ -26,7 +31,7 @@ npm install
 - copy env_sample to a new file (.env) and enter your Polygon RPC URL and the private key of the account that currently has its LP in the oSwap farm `cp env_sample .env`
 - make sure that the `.env` file is in the `.gitignore` file (it is by default, see Environment Variables below)
 - **Optional:** if you would like to keep the bot running on your system if you close your terminal or get disconnected, you can use tmux `tmux new -s openswap` to start a new tmux session.
-    - press `ctrl+b d` to leave the session running but exit.
+    - use `ctrl+b d` to leave the session running but exit.
     - use `tmux attach` to reconnect to the openswap session.
 - Now you're ready to run the openswap auto compounding bot `node index`
 
