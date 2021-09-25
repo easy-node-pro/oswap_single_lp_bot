@@ -20,7 +20,7 @@ Please be very careful with your private key and never push it to a public repos
 - You have money in the OpenSwap 100% validator or single staking oSwap LP pool earning oSwap as a reward
 - You have Harmony ONE to pay gas fees in your wallet
 
-# Steps to run the oSwap bot
+# Setup requirements
 Open a terminal and run the following to download and install pre-requesites for running the bot:
 ```bash
 git clone https://github.com/easy-node-one/oswap_single_lp_bot.git
@@ -33,7 +33,14 @@ npm install
 - **Optional:** if you would like to keep the bot running on your system if you close your terminal or get disconnected, you can use tmux `tmux new -s openswap` to start a new tmux session.
     - use `ctrl+b d` to leave the session running but exit.
     - use `tmux attach` to reconnect to the openswap session.
-- Now you're ready to run the openswap auto compounding bot `node index`
+
+# Run the oSwap Single LP Bot
+Now you're ready to run the openswap auto compounding bot, go to your oswap_single_lp_bot folder and run:
+- `node index`
+
+# Updates
+To update any recent changes to the bot, run the following command. Then verify the env_example matches your .env file post upgrade (things may be added or moved still):
+- `git pull`
 
 # Environment Variables
 Copy env_sample to .env & fill in with your settings. Here's our notes:
