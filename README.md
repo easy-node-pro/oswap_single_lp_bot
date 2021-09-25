@@ -15,8 +15,8 @@ Please be very careful with your private key and never push it to a public repos
 - You have Harmony ONE to pay gas fees
 
 # Steps to run
-- download this repository `git clone https://github.com/easy-node-one/oswap_bot.git`
-- cd `oswap_bot`
+- download this repository `git clone https://github.com/easy-node-one/oswap_single_lp_bot.git`
+- `cd cd oswap_single_lp_bot`
 - run `npm install openswap-core`
 - run `npm install`
 - copy env_sample to a new file (.env) and enter your Polygon RPC URL and the private key of the account that currently has its LP in the oSwap farm `cp env_sample .env`
