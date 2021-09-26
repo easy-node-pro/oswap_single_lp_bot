@@ -45,15 +45,15 @@ return balanceBN
 
 let currently_compounding = false
 
-let ts = Date.now();
-
-let date_ob = new Date(ts);
-let seconds = date_ob.getSeconds();
-let minutes = date_ob.getMinutes();
-let hours = date_ob.getHours();
 
 async function compound(amountOswap){
     if(currently_compounding) return
+    let ts = Date.now();
+    let date_ob = new Date(ts);
+    let seconds = date_ob.getSeconds();
+    let minutes = date_ob.getMinutes();
+    let hours = date_ob.getHours();
+
     console.log(`\nRun Compounding Cycle\nCurrent Time: ` + hours + ":" + minutes + ":" + seconds)
     try{
         
