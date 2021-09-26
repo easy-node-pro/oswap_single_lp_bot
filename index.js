@@ -45,9 +45,16 @@ return balanceBN
 
 let currently_compounding = false
 
+let ts = Date.now();
+
+let date_ob = new Date(ts);
+let seconds = date_ob.getSeconds();
+let minutes = date_ob.getMinutes();
+let hours = date_ob.getHours();
+
 async function compound(amountOswap){
     if(currently_compounding) return
-    console.log('\nRun Compounding')
+    console.log(`\nRun Compounding Cycle\nCurrent Time: ` + hours + ":" + minutes + ":" + seconds)
     try{
         
         const gasLimit = 200000 //(await web3.eth.getBlock('latest')).gasLimit
@@ -61,6 +68,7 @@ async function compound(amountOswap){
             }
         )
         console.log(`Deposit Completed: ${depositTx.status}\n`)
+        console.log(`Next run in ${process.env.CYCLE_TIME/60000} Minutes.\n`)
     } catch (err){
         currently_compounding = false
         console.log(`Deposit OSWAP Error: ${err.message}\n`)
@@ -88,7 +96,7 @@ compound(result)
         console.log(`Pending oSwap to deposit ${resultRound.toFixed(8)}`)
 });
 
-const POLLING_INTERVAL = 600000 // 10 minutes 
+const POLLING_INTERVAL = process.env.CYCLE_TIME // 10 minutes 
 setInterval(async () => { await getBalance().then(function (result) {
 
 compound(result)
@@ -108,3 +116,5 @@ compound(result)
         resultRound = result * 0.000000000000000001
         console.log(`Pending oSwap to deposit ${resultRound.toFixed(8)}`)
 });}, POLLING_INTERVAL)
+
+

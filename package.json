@@ -1,7 +1,7 @@
 {
-  "name": "oswap_bot",
+  "name": "oswap_single_lp_bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "When you download, configure, & start this bot, it will deposit any oSwap Tokens you have into the Open Swap Single Pool. That deposit triggers a claim of pending rewards the next time it runs in 10 minutes.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,19 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.2",
+    "chalk": "^4.1.2",
     "dotenv": "^10.0.0",
     "openswap-core": "^0.7.8",
     "web3": "^1.5.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easy-node-one/oswap_single_lp_bot.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/easy-node-one/oswap_single_lp_bot/issues"
+  },
+  "homepage": "https://github.com/easy-node-one/oswap_single_lp_bot#readme",
+  "devDependencies": {}
 }
